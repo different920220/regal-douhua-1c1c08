@@ -10,17 +10,18 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9fafb;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       color: #333;
     }
 
     .container {
       max-width: 850px;
-      margin: 40px auto;
+      margin: 60px auto;
       background: white;
       padding: 40px;
       border-radius: 10px;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
     h2 {
@@ -47,30 +48,28 @@
       margin-bottom: 10px;
     }
 
-    /* Хэлний товчнууд */
-    #lang-select {
-      text-align: center;
-      margin-bottom: 20px;
+    #lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
     }
 
-    #lang-select button {
+    #lang-toggle button {
       background-color: #2980b9;
       color: white;
       border: none;
-      padding: 8px 16px;
-      margin: 0 5px;
-      font-size: 14px;
-      border-radius: 5px;
+      padding: 10px 16px;
+      font-size: 22px;
+      border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
-    #lang-select button:hover,
-    #lang-select button.active {
+    #lang-toggle button:hover {
       background-color: #1c5980;
     }
 
-    /* Бусад хэлний контентуудыг нуух */
     .lang {
       display: none;
     }
@@ -84,201 +83,148 @@
 <body>
   <div class="container">
 
-    <div id="lang-select">
-      <button id="btn-en" class="active">🇺🇸 English</button>
-      <button id="btn-mn">🇲🇳 Монгол</button>
+    <div id="lang-toggle">
+      <button id="toggleBtn" title="Switch Language">🇲🇳</button>
     </div>
 
-    <!-- Англи хэлний хувилбар -->
+    <!-- English -->
     <div id="content-en" class="lang active">
-      <h2>Privacy Policy / Нууцлалын бодлого</h2>
+      <h2>Privacy Policy</h2>
 
-      <div class="section-dual-lang">
-        <h3>1. Introduction / Танилцуулга</h3>
-        <p>
-          Loan Core Platform LLC ("we", "us", "our") respects your privacy. This Privacy Policy explains how we collect,
-          use, and protect your personal information when using the <strong>Ger HR</strong> app.
-          By using the app, you agree to this policy.
-        </p>
-      </div>
+      <h3>1. Introduction</h3>
+      <p>
+        This Privacy Policy explains how "Loan Core Platform LLC" (hereinafter referred to as “we”, “our”, or “the
+        Company”) collects, uses, and protects user information when using the “Ger HR” application.
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>2. Information We Collect / Бидний цуглуулдаг мэдээлэл</h3>
-        <p>
-          <strong>Personal Information:</strong> Name, email, job role, work hours, leave requests<br>
-          <strong>Location Data:</strong> Collected with your consent only when the app is in use (foreground), used for
-          verifying work presence<br>
-          <strong>Device Information:</strong> Device model, OS version — used only to ensure compatibility and
-          performance
-        </p>
-      </div>
+      <h3>2. Collected Information</h3>
+      <p>
+        We may collect the following personal information:\n- Name\n- Phone number\n- Email address\n- Position and
+        organization\n- IP address and device information
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>3. How We Use Your Data / Мэдээллийг хэрхэн ашигладаг вэ</h3>
-        <p>
-          - To verify employee attendance and location<br>
-          - To operate internal HR and ERP systems<br>
-          - To ensure app security and stability
-        </p>
-      </div>
+      <h3>3. Use of Information</h3>
+      <p>
+        We use the collected information for:\n- Providing the application’s main functionalities\n- Service improvement
+        and support\n- User identification and authentication\n- Legal compliance
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>4. Data Sharing / Мэдээлэл дамжуулах</h3>
-        <p>
-          We do <strong>not</strong> share, sell, or transfer your data to any third party. All information is stored
-          securely and used only by authorized personnel of Loan Core Platform LLC.
-        </p>
-      </div>
+      <h3>4. Information Sharing</h3>
+      <p>
+        We do not share your personal information with third parties, except in the following cases:\n- Legal
+        requirements\n- With your consent\n- Service providers bound by confidentiality agreements
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>5. Permissions / Эрхийн хэрэглээ</h3>
-        <p>
-          Location – Used only in the foreground, with user consent, to confirm attendance<br>
-          Network – For syncing attendance and HR data<br>
-          No other sensitive permissions are used
-        </p>
-      </div>
+      <h3>5. Data Protection</h3>
+      <p>
+        We protect your information using industry-standard encryption and secure server environments.
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>6. Children's Privacy / Хүүхдийн мэдээлэл</h3>
-        <p>
-          The app is for internal employee use only and is not intended for users under 13. We do not knowingly collect
-          personal information from children.
-        </p>
-      </div>
+      <h3>6. User Rights</h3>
+      <p>
+        You have the right to:\n- View your personal information\n- Request updates or deletion of data\n- Withdraw
+        consent
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>7. Your Rights / Таны эрх</h3>
-        <p>
-          You may contact us to review, correct, or delete your information at any time. You may also opt out of
-          location
-          collection via device settings.
-        </p>
-      </div>
+      <h3>7. Children's Privacy</h3>
+      <p>
+        The application is not intended for users under the age of 13.
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>8. Policy Updates / Бодлогын шинэчлэлт</h3>
-        <p>
-          We may update this Privacy Policy from time to time. Any changes will be posted on this page, and users will
-          be
-          notified of significant updates.
-        </p>
-      </div>
+      <h3>8. Changes to Policy</h3>
+      <p>
+        We may update this Privacy Policy periodically. Updates will be posted within the app or website.
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>9. Contact / Холбоо барих</h3>
-        <p>Loan Core Platform LLC</p>
-        <p>Address: Ulaanbaatar, Chingeltei District, 6th Khoroo, 6th Microdistrict, Baga Toiruu, 62/1, Room 82</p>
-        <p>Email: <a href="mailto:baasansuren@loaner.mn">baasansuren@loaner.mn</a></p>
-        <p>Website: <a href="https://www.loaner.mn" target="_blank">https://www.loaner.mn</a></p>
-      </div>
+      <h3>9. Contact</h3>
+      <p>
+        Loan Core Platform LLC<br />
+        Address: Ulaanbaatar, Chingeltei District, 1st khoroo, Peace Avenue, Bodi Tower 5th floor<br />
+        Email: <a href="mailto:baasansuren@loaner.mn">baasansuren@loaner.mn</a><br />
+        Website: <a href="https://www.loaner.mn" target="_blank">https://www.loaner.mn</a>
+      </p>
     </div>
 
-    <!-- Монгол хэлний хувилбар -->
+    <!-- Монгол -->
     <div id="content-mn" class="lang">
-      <h2>Нууцлалын бодлого / Privacy Policy</h2>
+      <h2>Нууцлалын бодлого</h2>
 
-      <div class="section-dual-lang">
-        <h3>1. Танилцуулга / Introduction</h3>
-        <p>
-          Loan Core Platform LLC ("бид", "манай") нь таны хувийн мэдээллийг хамгаалахыг эрхэмлэдэг. Энэхүү бодлогоор
-          <strong>Ger HR</strong> апп ашиглах үед таны хувийн мэдээллийг хэрхэн цуглуулж, ашиглаж, хамгаалдаг талаар
-          тайлбарлана.
-        </p>
-      </div>
+      <h3>1. Танилцуулга</h3>
+      <p>
+        Энэхүү нууцлалын бодлого нь “Loan Core Platform” ХХК (цаашид “бид”, “манай компани” гэх) нь “Ger HR”
+        аппликейшнийг ашиглаж буй хэрэглэгчдийн мэдээллийг хэрхэн цуглуулж, ашиглаж, хамгаалдаг талаар тайлбарлана.
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>2. Бидний цуглуулдаг мэдээлэл / Information We Collect</h3>
-        <p>
-          <strong>Хувийн мэдээлэл:</strong> Нэр, и-мэйл, албан тушаал, ажлын цаг, чөлөөний хүсэлт<br>
-          <strong>Байршлын мэдээлэл:</strong> Зөвхөн апп ашиглаж байх үед хэрэглэгчийн зөвшөөрлөөр цуглуулна. Ажил дээр
-          байгаа эсэхийг баталгаажуулах зорилготой<br>
-          <strong>Төхөөрөмжийн мэдээлэл:</strong> Төхөөрөмжийн загвар, Android хувилбар — зөвхөн системийн нийцэл,
-          ажиллагаанд зориулагдана
-        </p>
-      </div>
+      <h3>2. Цуглуулж болох мэдээлэл</h3>
+      <p>
+        Бид дараах хувийн мэдээллийг цуглуулж болно:\n- Нэр\n- Утасны дугаар\n- И-мэйл хаяг\n- Албан тушаал,
+        байгууллага\n- IP хаяг болон төхөөрөмжийн мэдээлэл
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>3. Мэдээллийг хэрхэн ашигладаг вэ / How We Use Your Data</h3>
-        <p>
-          - Ажилчдын ирц, байрлал шалгах<br>
-          - Дотоод ERP болон хүний нөөцийн системд ашиглах<br>
-          - Апп-ийн аюулгүй байдал, тогтвортой ажиллагааг хангах
-        </p>
-      </div>
+      <h3>3. Мэдээллийг ашиглах</h3>
+      <p>
+        Цуглуулсан мэдээллийг дараах зорилгоор ашиглана:\n- Аппликейшний үндсэн үйлдлийг гүйцэтгэх\n- Үйлчилгээний
+        сайжруулалт, дэмжлэг\n- Хэрэглэгчийг таних, нэвтрэх\n- Хуулийн шаардлагыг биелүүлэх
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>4. Мэдээлэл дамжуулах / Data Sharing</h3>
-        <p>
-          Бид таны мэдээллийг <strong>ямар ч гуравдагч этгээдэд дамжуулахгүй</strong>. Зөвхөн эрх бүхий ажилтнууд дотоод
-          зорилгоор хэрэглэнэ. Мэдээллийг аюулгүй хадгална.
-        </p>
-      </div>
+      <h3>4. Мэдээлэл хуваалцах</h3>
+      <p>
+        Бид таны хувийн мэдээллийг гуравдагч этгээдтэй дараах нөхцөлд хуваалцаж болно:\n- Хууль эрх зүйн шаардлагын
+        дагуу\n- Таны зөвшөөрлөөр\n- Нууцлалын гэрээтэй үйлчилгээ үзүүлэгчтэй
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>5. Эрхийн хэрэглээ / Permissions</h3>
-        <p>
-          Байршлын эрх – Зөвхөн урд горимд хэрэглэгчийн зөвшөөрлөөр ирцийг баталгаажуулахад хэрэглэгдэнэ<br>
-          Сүлжээ – Хүний нөөцийн өгөгдөл болон ирцийн мэдээлэл синк хийхэд хэрэглэнэ<br>
-          Бусад мэдрэмтгий эрхүүдийг ашигладаггүй
-        </p>
-      </div>
+      <h3>5. Мэдээллийн аюулгүй байдал</h3>
+      <p>
+        Таны мэдээллийг салбарын стандартад нийцсэн нууцлалын систем, сервер дээр хадгална.
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>6. Хүүхдийн мэдээлэл / Children's Privacy</h3>
-        <p>
-          Апп нь компанийн ажилчдад зориулагдсан бөгөөд 13 наснаас доош хүүхдэд зориулагдаагүй. Хүүхдээс хувийн мэдээлэл
-          санаатайгаар цуглуулахгүй.
-        </p>
-      </div>
+      <h3>6. Хэрэглэгчийн эрх</h3>
+      <p>
+        Та дараах эрхтэй:\n- Хувийн мэдээллээ харах\n- Мэдээллээ засах эсвэл устгуулах хүсэлт гаргах\n- Зөвшөөрлөө
+        буцаан татах
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>7. Таны эрх / Your Rights</h3>
-        <p>
-          Та бидэнтэй холбогдож хувийн мэдээллээ хянах, засах, устгуулах хүсэлт гаргах боломжтой. Мөн та төхөөрөмжийн
-          тохиргооноос байршлын мэдээлэл цуглуулахыг болиулах боломжтой.
-        </p>
-      </div>
+      <h3>7. Хүүхдийн мэдээлэл</h3>
+      <p>
+        Аппликейшн нь 13-аас доош насны хүүхдэд зориулагдаагүй болно.
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>8. Бодлогын шинэчлэлт / Policy Updates</h3>
-        <p>
-          Бид энэхүү Нууцлалын бодлогыг үе үе шинэчлэх боломжтой. Шинэчлэлтийг энэ хуудсанд нийтлэх бөгөөд хэрэглэгчдэд
-          чухал өөрчлөлтүүдийг мэдэгдэнэ.
-        </p>
-      </div>
+      <h3>8. Бодлогын өөрчлөлт</h3>
+      <p>
+        Энэхүү бодлогыг цаг үеийн нөхцөл байдалд тохируулан шинэчилж болно. Шинэчлэлтийг апп болон вебсайтаар дамжуулан
+        мэдэгдэнэ.
+      </p>
 
-      <div class="section-dual-lang">
-        <h3>9. Холбоо барих / Contact</h3>
-        <p>Loan Core Platform LLC</p>
-        <p>Хаяг: Улаанбаатар, Чингэлтэй дүүрэг, 6-р хороо, 6-р хороолол, Бага тойруу, 62/1, 82-р өрөө</p>
-        <p>Имэйл: <a href="mailto:baasansuren@loaner.mn">baasansuren@loaner.mn</a></p>
-        <p>Вэб сайт: <a href="https://www.loaner.mn" target="_blank">https://www.loaner.mn</a></p>
-      </div>
+      <h3>9. Холбоо барих</h3>
+      <p>
+        “Loan Core Platform” ХХК<br />
+        Хаяг: Улаанбаатар хот, Чингэлтэй дүүрэг, 1-р хороо, Энхтайвны өргөн чөлөө, Боди Тауэр 5 давхар<br />
+        Имэйл: <a href="mailto:baasansuren@loaner.mn">baasansuren@loaner.mn</a><br />
+        Вэбсайт: <a href="https://www.loaner.mn" target="_blank">https://www.loaner.mn</a>
+      </p>
     </div>
 
   </div>
 
   <script>
-    const btnEn = document.getElementById("btn-en");
-    const btnMn = document.getElementById("btn-mn");
+    const toggleBtn = document.getElementById("toggleBtn");
     const contentEn = document.getElementById("content-en");
     const contentMn = document.getElementById("content-mn");
 
-    btnEn.addEventListener("click", () => {
-      contentEn.classList.add("active");
-      contentMn.classList.remove("active");
-      btnEn.classList.add("active");
-      btnMn.classList.remove("active");
-      document.documentElement.lang = "en";
-    });
+    toggleBtn.addEventListener("click", () => {
+      const isEnglish = contentEn.classList.contains("active");
 
-    btnMn.addEventListener("click", () => {
-      contentMn.classList.add("active");
-      contentEn.classList.remove("active");
-      btnMn.classList.add("active");
-      btnEn.classList.remove("active");
-      document.documentElement.lang = "mn";
+      if (isEnglish) {
+        contentEn.classList.remove("active");
+        contentMn.classList.add("active");
+        document.documentElement.lang = "mn";
+        toggleBtn.textContent = "🇬🇧";
+      } else {
+        contentMn.classList.remove("active");
+        contentEn.classList.add("active");
+        document.documentElement.lang = "en";
+        toggleBtn.textContent = "🇲🇳";
+      }
     });
   </script>
 </body>
